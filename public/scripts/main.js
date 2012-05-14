@@ -3,6 +3,11 @@
 
   $(function() {
     return $("#fileupload").fileupload({
+      url: 'upload'
+    }, {
+      maxFileSize: 5000000,
+      acceptFileTypes: /(\.|\/)(xls?x|txt)$/i
+    }, {
       dataType: "json",
       always: function(e, data) {
         var body;
